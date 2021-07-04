@@ -1,0 +1,30 @@
+.item {
+    background-color: #840505;
+    border-left-style: solid;
+    padding: 20px;
+    border-left-color: black;
+    border-left-width: thick;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.item:not(:first-child) {
+    margin-top: 15px;
+}
+
+.itemTitle {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.detailsBtn {
+    cursor: pointer;
+    background-color: #2B82ED;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+

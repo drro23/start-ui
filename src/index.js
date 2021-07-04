@@ -1,12 +1,27 @@
 import React from 'react';
+import {Provider} from "react-redux";
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import appStore from "./redux/store";
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./pages/Home";
+// import ResourceDetails from './pages/ResourceDetails';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={appStore.store}>
+          <Router>
+              <Switch>
+                  {/*<Route path="/:id">*/}
+                  {/*    <ResourceDetails />*/}
+                  {/*</Route>*/}
+                  <Route path="/">
+                      <Home />
+                  </Route>
+              </Switch>
+          </Router>
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
